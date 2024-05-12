@@ -1,6 +1,8 @@
 
 export const Search = () => {
   return (
-    <main>Search</main>
+    <main>
+      <p>Search</p>
+    </main>
   )
 }
