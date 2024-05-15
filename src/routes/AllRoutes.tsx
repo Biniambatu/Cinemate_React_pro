@@ -6,8 +6,7 @@ import { Card, Footer, Header } from "../components";
 
 const AllRoutes = () => {
   return (
-    <main>
-       <Header></Header>
+    <div className="dark:bg-slate-800">
         <Routes>
             <Route path="/" element={<MovieList/>}></Route>
             <Route path="movie/:id" element={<MovieListDetail/>}></Route>
@@ -17,8 +16,7 @@ const AllRoutes = () => {
             <Route path="search" element={<Search/>}></Route>
             <Route path="*" element={<PageNotFound/>}></Route>
         </Routes>
-      <Footer></Footer>
-    </main>
+    </div>
   )
 }
 
