@@ -5,8 +5,6 @@ export const Card = ({movie}) => {
   const {id, original_title, overview, poster_path} = movie;
   const image = `https://image.tmdb.org/t/p/w500/${poster_path}`
   return (
-    
-      <>
         <div>
             <div className="max-w-sm ml-7 mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <Link to={`/movie/${id}`}>
@@ -20,7 +18,5 @@ export const Card = ({movie}) => {
                 </div>
             </div>
         </div>
-      </>
-
   )
 }
