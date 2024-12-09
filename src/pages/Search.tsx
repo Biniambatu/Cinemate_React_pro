@@ -3,9 +3,11 @@ import { useFetch } from "../hooks/useFetch"
 import { Card } from "../components"
 
 
-export const Search = () => {
+export const Search = ({apiPath}:any) => {
   const[searchParams] = useSearchParams()
-  //const queryTerm = searchParams.get('q')
+  const queryTerm = searchParams.get("q")
+
+  const {data: movies} = useFetch(apiPath, queryTerm)
 
   return (
     <main>
