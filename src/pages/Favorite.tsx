@@ -8,10 +8,11 @@ const Favorite = () => {
   const movieList = useSelector(state => state.MovieReducer.MovieList)
   return (
     <div className=' max-w-7x1 mx-auto py-7'>
-     
+          
           {movieList.map((movie:any) => (
         <FavoriteCart key={movie.id} movie={movie}/>
-      ))}
+      ))
+      }
     </div>
   )
 }

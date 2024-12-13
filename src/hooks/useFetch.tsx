@@ -9,7 +9,7 @@ export const useFetch = (apiPath, queryTerm="") => {
   const [error, setError] = useState()
   const [loading, setLoading] = useState(false);
   const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${apiKey}&query=${queryTerm}`
-
+  
   useEffect(() => {
     axios.get(url)
       .then(res => setData(res.data.results))

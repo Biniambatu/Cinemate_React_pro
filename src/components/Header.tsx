@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, json, useNavigate } from "react-router-dom";
 import logo from '../assets/google-play-games.png'
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { useSelector } from "react-redux";
 export const Header = () => {
+  const movieList = useSelector(state => state.MovieReducer.MovieList)
+
   const activeClass = "text-base block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
   const inActiveClass = "text-baseblock py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-  const[hidden, setHidden] =  useState(true)
+  const [hidden, setHidden] =  useState(true)
   const [darkMode, setDarkMode] = useState( JSON.parse(localStorage.getItem("darkmode")) || false);
   const navigate = useNavigate()
+
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
     if(darkMode){
@@ -95,7 +100,14 @@ export const Header = () => {
                 <li>
                 </li>
               </li>
-              <NavLink to='/favorite' className={({isActive})=> isActive ? activeClass : inActiveClass }>Favorite</NavLink>
+              <NavLink to='/favorite' className={({isActive})=> isActive ? activeClass : inActiveClass } >
+                 <span className="cursor-pointer text-xl text-gray-700 dark:text-white">
+                   <FavoriteIcon size="30px" className="relative ml-10" />
+                   <span className="absolute -top--1 2-right-0 bg-rose-500 text-white text-xs px-1 rounded-full">
+                     {movieList.length}
+                   </span>
+                </span>
+              </NavLink>
             </ul>
           </div>
         </div>

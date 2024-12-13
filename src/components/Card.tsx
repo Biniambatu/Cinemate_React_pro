@@ -22,10 +22,9 @@ export const Card = ({movie}) => {
 
   return (
         <div>
-            
-            <div className="max-w-sm ml-7 mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="max-w-sm ml-7  mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <Link to={`/movie/${id}`}>
-                    <img className="rounded-t-lg" src={image} alt="" />
+                    <img className="rounded-t-lg " src={image} alt="" />
                 </Link>
                 <div className="p-5">
                     <Link to={`/movie/${id}`}>
@@ -37,7 +36,6 @@ export const Card = ({movie}) => {
                     </button>) : ( <button onClick={() => dispatch(add_to_cart(movie))} className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
                        Favorite
                     </button>)}
-                   
                 </div>
             </div>
         </div>

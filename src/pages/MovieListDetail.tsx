@@ -19,15 +19,6 @@ export const MovieListDetail = () => {
   },[])
 
   return (
-        // <main>
-        //   <section className="flex justify-around flex-wrap py-5">
-        //      <div className="max-w-sm">
-        //        <img className="rounded" src={image} alt={movie.title}/>
-        //      </div>
-        //      {movie.title}
-        //   </section>
-        // </main>
-
     
      <div className="flex flex-col md:flex-row bg-gray-900 text-white p-6 md:p-12 dark:bg-white-900 dark:border-white-700 dark:text-white-400">
         <div className="md:w-1/2 flex justify-center">
