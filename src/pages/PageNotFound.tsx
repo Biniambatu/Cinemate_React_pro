@@ -1,7 +1,23 @@
-
+import { Link, useNavigate } from 'react-router-dom'
+import img from '../assets/pexels-tima-miroshnichenko-5640644.jpg'
 
 export const PageNotFound = () => {
+  const navigate = useNavigate()
   return (
-    <main>PageNotFound</main>
+    <main>
+      <section className="flex flex-col justify-center px-2" >
+        <div className="flex flex-col items-center my-4">
+          <p className="text-7x1 text-gray-700 font-bold my-10 dark:text-white">404, Oops!</p>
+          <div className="max-w-lg">
+            <img className="rounded" src={img} alt="" />
+          </div>
+        </div>
+        <div className='flex justify-center my-4'>
+           <Link to='/'>
+            <button className='w-64 text-xl text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-lg px-5 py-2.5 mr-2 mb-2 font-medium'>Back To CINIMATE</button>
+           </Link>
+        </div>
+      </section>
+    </main>
   )
 }
