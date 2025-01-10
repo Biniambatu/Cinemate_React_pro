@@ -7,7 +7,7 @@ export const useFetch = (apiPath, queryTerm="") => {
 
   const [data, setData] = useState([])
   const [error, setError] = useState()
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${apiKey}&query=${queryTerm}`
   
   useEffect(() => {
@@ -15,8 +15,13 @@ export const useFetch = (apiPath, queryTerm="") => {
       .then(res => setData(res.data.results))
       .catch(err => setError(err.message))
       .finally(() => setLoading(true))
+      setLoading(false)
   },[url])
-
+    // if(loading){
+    //    return <section>
+    //     <h1>Loading...</h1>
+    //    </section>
+    // }
      return {data}
 
 }

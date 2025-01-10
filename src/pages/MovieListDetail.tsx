@@ -1,9 +1,9 @@
-import axios from "axios"
-import { log } from "console"
+
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { add_to_cart, remove_from_cart } from "../Store.tsx/movieCart"
 import { useDispatch, useSelector } from "react-redux"
+
 
 
 export const MovieListDetail = () => {
@@ -79,12 +79,8 @@ export const MovieListDetail = () => {
             </div>
             {InCart ? ( <button className="w-32 text-white py-2 px-4 rounded bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out" onClick={() => dispatch(remove_from_cart(movie))}>Remove</button>) 
             : ( <button className="w-32 text-white py-2 px-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out" onClick={() => dispatch(add_to_cart(movie))}>Favorite</button>)}
-           
             </div>
-          
          </div> 
       </div>
-
-    
   )
 }
