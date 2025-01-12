@@ -14,44 +14,6 @@ function Hero6() {
 
   return (
     <div className="relative pt-32 overflow-hidden bg-black xl:pt-40">
-      {/* <header className="absolute inset-x-0 top-0 z-10 py-8 xl:py-12">
-        <div className={commonStyles.container}>
-          <div className="flex items-center justify-between">
-            <a
-              href="#"
-              title="AuraUI"
-              className={`inline-flex rounded-md ${commonStyles.focusRing}`}
-            >
-              <img
-                className="w-auto h-8"
-                src="https://www.auraui.com/logo-dark.png"
-                alt="AuraUI Logo"
-              />
-            </a>
-
-            <div className="md:hidden">
-              <button
-                type="button"
-                className={`p-2 -m-2 text-white rounded-full ${commonStyles.focusRing}`}
-              >
-                <HiOutlineBars3 className="w-7 h-7" />
-              </button>
-            </div>
-
-            <nav className="hidden md:flex md:items-center md:space-x-10 lg:ml-28">
-              {["Home", "Components", "Contact"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className={`text-base font-normal text-white transition-all duration-200 rounded ${commonStyles.focusRing}`}
-                >
-                  {item}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </header> */}
 
       <div className="relative">
         <div className={commonStyles.container}>
@@ -69,7 +31,7 @@ function Hero6() {
 
             <div className="mt-8">
               <Link
-                to='movies/popular'
+                to='/home'
                 className={`${commonStyles.button} px-8 py-2 text-black bg-white border-2 border-transparent hover:bg-opacity-90 ${commonStyles.focusRing}`}
               >
                 Get started

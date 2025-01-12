@@ -5,8 +5,8 @@ import Testimonial from './Testimonial'
 
 const LandingPage = () => {
   return (
-    <div>
-        <Hero6/>
+    <div >
+        <Hero6 />
         <Feature8/>
         <Testimonial/>
     </div>

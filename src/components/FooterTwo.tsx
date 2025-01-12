@@ -14,7 +14,7 @@ import {
 
 const Footer7 = () => {
   return (
-    <div className="bg-gray-800 flex flex-col justify-center ">
+     <div className="bg-gray-800 flex flex-col justify-center ">
       <div className="max-w-5xl w-11/12 mx-auto flex flex-wrap justify-between py-16 gap-8">
         <div className="w-full h-[40px] sm:w-auto flex justify-center sm:justify-start">
           <img
@@ -103,6 +103,7 @@ const Footer7 = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

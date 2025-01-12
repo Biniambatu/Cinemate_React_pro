@@ -66,7 +66,7 @@ const Feature8: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid max-w-md grid-cols-1 gap-5 mx-auto mt-16 text-center lg:grid-cols-3 lg:max-w-none">
+        <div className="grid max-w-md grid-cols-1 gap-5 mx-auto mt-16 text-center lg:grid-cols-3 lg:max-w-none ">
           {features.map((feature, index) => (
             <div key={index} className={commonStyles.featureCard}>
               <div className={commonStyles.featureImageContainer}>
@@ -84,7 +84,7 @@ const Feature8: React.FC = () => {
                 </p>
                 <Link to="#" title="Read More" className={commonStyles.readMore}>
                   Read More
-                  <div className="inline-flex items-center justify-center w-8 h-8 ml-2 transition-all duration-200 bg-transparent rounded-full group-hover:bg-neutral">
+                  <div className="inline-flex items-center justify-center w-8 h-8 ml-2 transition-all duration-200 bg-transparent rounded-full group-hover:bg-neutral ">
                     <FaArrowRight className="w-6 h-6" />
                   </div>
                 </Link>
